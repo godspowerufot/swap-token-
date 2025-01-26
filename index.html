@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Swap Demo</title>
+    <!-- Add This 👇 -->
+    <script src="https://terminal.jup.ag/main-v1.js" data-preload></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #002e3b;
+        }
+        h1 {
+            padding: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        #integrated-terminal {
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #304256
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quick Swap Demo</h1>
+    <div id="integrated-terminal">
+        <script>
+            window.Jupiter.init({
+                displayMode: "integrated",
+                integratedTargetId: "integrated-terminal",
+                // 👇 REPLACE THIS WITH YOUR OWN HTTP PROVIDER ENDPOINT
+                endpoint: "https://lingering-intensive-slug.solana-testnet.quiknode.pro/f718509f7ad579441fe0c024f5b64659fc6f64ae",
+                formProps: {
+                    fixedOutputMint: true
+                },
+                     // 👇 Add your custom token here
+                     strictTokenList: [
+                    {
+                        address: "EoRe4xECTe9imaYtwfdmrGoinD2S1N5yMeu1LrjQpump",
+                        decimals: 6, // Replace with the correct decimals
+                        name: "Meme world order", // Replace with the token name
+                        symbol: "MWOR", // Replace with the token symbol
+                        logoURI: "https://ipfs.io/ipfs/QmVt5XCuLxw2BxzkoUJA7ZszDAEp7VnjsLx8Lsc9oKhsfk" // Optional: Add a logo URL
+                    }
+                ]
+            });
+        </script>
+    </div>
+</body>
+
+</html>
